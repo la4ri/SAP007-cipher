@@ -24,18 +24,23 @@
 
   <hr>
 
-  <div>
-    <input class="areaTexto" type="text" id="mensagem" placeholder="Escreva aqui sua mensagem" />
-    <input type="number" id="offset-encode" min="1" max="25" value="10"/>
-  </div>
-  <div class="botao">
-    <button type="submit" id="codificar">CODIFICAR</button>
-    <button type="submit" id="descodificar">DESCODIFICAR</button>
+    <p class="texto2">Digite abaixo sua mensagem a ser codificada e clique em codificar. Caso tenha recebido uma mensagem codificada, escreva embaixo a mensagem codificada e informe qual deslocamento foi utilizado e clique em descodificar:</p>
+  <div class="core">
+    <div class="areaTexto">
+      <input  type="text" id="mensagem" placeholder="Escreva aqui sua mensagem" />
+    </div>
+    <div class="deslocamento"> 
+      <p>Escolha o deslocamento:</p>
+      <input type="number" id="offset-encode" min="1" max="25" value="10" />
+    </div>
+    <div class="botao">
+      <button type="submit" id="codificar">CODIFICAR</button>
+      <button type="submit" id="descodificar">DESCODIFICAR</button>
+    </div>
+
+    <div id="resultadoCodificar"><span>O resultado da mensagem virá aqui.</span></div>
   </div>
 
-  <div id="resultadoCodificar">O resultado da mensagem virá aqui.</div>
-
-  
 
 
 
