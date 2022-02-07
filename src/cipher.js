@@ -1,7 +1,6 @@
 const cipher = {
   encode(offset, mensagem) {
-    // se offset for numero, nao da erro
-    // se offset nao for numero, da erro
+    
     if (typeof offset !== "number") {
       throw new TypeError("offset não é um número");
     }

@@ -1,6 +1,5 @@
 import cipher from './cipher.js';
 
-// console.log(cipher);
 
 const areaTexto = document.getElementById("mensagem");
 const botaoCodificar = document.getElementById("codificar");
