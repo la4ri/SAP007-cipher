@@ -1,0 +1,78 @@
+html {
+    background-color: rgb(242, 132, 130);
+}
+
+body {
+    width: 1400px;
+    margin: 50px;
+    background-color: rgb(193, 253, 245);
+    padding: 10px 20px 50px 20px;
+    font-family: Arial;
+    border-radius: 20px;
+}
+
+.principal {
+    text-align:center;
+    font-size: 50px;
+    border-bottom: 5px double rgb(246, 96, 96);
+
+}
+
+.texto {
+    text-align: justify;
+    text-indent: 50px;
+    color: rgb(51, 51, 51);
+    
+}
+
+.core div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.core p {
+    margin: 0 10px 0 0;
+}
+
+.areaTexto input[type=text] {
+    margin-top: 20px;
+    font-size: 20px;
+    height: 50px;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.deslocamento input[type=number] {
+    height: 20px;
+    width: 35px;
+    border-radius: 20px;
+}
+
+.botao button {
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(245, 202, 195);
+}
+
+#resultadoCodificar {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+#resultadoCodificar span {
+    font-size: 14px;
+}
+
+.texto2 {
+    text-align: center;
+    font-size: 17px;
+
+}
+button:hover{
+    background-color: rgb(246, 189, 96);
+    color:darkblue;
+}

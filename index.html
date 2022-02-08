@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="root">
+    <h1 class="principal">CAESAR CIPHER</h1>
+
+    <h2 class="texto"> <i>Já pensou em mandar uma mensagem para seu amor criptografada, de uma forma que só vocês
+        poderiam entender?</i></h2>
+    <hr>
+    <p class="texto">A Cifra de César foi desenvolvida com o intuito de possibilitar à dois indivíduos se comunicar de
+      forma segura, ou seja, consiste em cifrar uma informação que será enviada pelo remetente de forma que, caso esta
+      informação seja interceptada por algum intruso, ele não seja capaz de entende-la. Conta a história que Júlio César
+      utilizava um código nas mensagens enviadas a seus generais, um sistema simples de substituição, no qual cada letra
+      da mensagem original era trocada pela letra que se situa três posições à sua frente.</p>
+  </div>
+
+  <hr>
+
+    <p class="texto2">Digite abaixo sua mensagem a ser codificada e clique em codificar. Caso tenha recebido uma mensagem codificada, escreva embaixo a mensagem codificada e informe qual deslocamento foi utilizado e clique em descodificar:</p>
+  <div class="core">
+    <div class="areaTexto">
+      <input  type="text" id="mensagem" placeholder="Escreva aqui sua mensagem" />
+    </div>
+    <div class="deslocamento"> 
+      <p>Escolha o deslocamento:</p>
+      <input type="number" id="offset-encode" min="1" max="25" value="10" />
+    </div>
+    <div class="botao">
+      <button type="submit" id="codificar">CODIFICAR</button>
+      <button type="submit" id="descodificar">DESCODIFICAR</button>
+    </div>
+
+    <div id="resultadoCodificar"><span>O resultado da mensagem virá aqui.</span></div>
+  </div>
+
+
+
+
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
