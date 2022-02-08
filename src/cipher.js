@@ -1,6 +1,11 @@
+const CODIGO_A = 65;
+const CODIGO_Z = 90;
+const UNIVERSO = CODIGO_Z - CODIGO_A + 1;
+
+
 const cipher = {
   encode(offset, mensagem) {
-    
+
     if (typeof offset !== "number") {
       throw new TypeError("offset não é um número");
     }
@@ -14,11 +19,14 @@ const cipher = {
 
     for (let i = 0; i < quantidadeLetras; i++) {
       let codigoASC = mensagem.charCodeAt(i);
-      let codigoA = 65;
-      let cifrar = (codigoASC - codigoA + offset) % 26 + codigoA;
-      resultadoCifra = resultadoCifra.concat(String.fromCharCode(cifrar))
+      if (codigoASC >= CODIGO_A && codigoASC <= CODIGO_Z) {
+        codigoASC = (codigoASC - CODIGO_A + offset) % UNIVERSO + CODIGO_A;
+      }
+
+      resultadoCifra = resultadoCifra.concat(String.fromCharCode(codigoASC))
     }
     return resultadoCifra
+
   },
 
   decode(offset, mensagem) {
@@ -36,9 +44,10 @@ const cipher = {
 
     for (let i = 0; i < quantidadeLetras; i++) {
       let codigoASC = mensagem.charCodeAt(i);
-      let codigoZ = 90;
-      let cifrar = (codigoASC - codigoZ - offset) % 26 + codigoZ;
-      resultadoCifra = resultadoCifra.concat(String.fromCharCode(cifrar))
+      if (codigoASC >= CODIGO_A && codigoASC <= CODIGO_Z) {
+        codigoASC = (codigoASC - CODIGO_Z - offset) % UNIVERSO + CODIGO_Z;
+      }
+      resultadoCifra = resultadoCifra.concat(String.fromCharCode(codigoASC))
     }
     return resultadoCifra
 
@@ -47,5 +56,3 @@ const cipher = {
 };
 
 export default cipher;
-
-
