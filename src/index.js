@@ -10,11 +10,11 @@ const offset = document.getElementById("offset-encode");
 
 function codificarClick() {
 
-    resultadoCifraEncode.innerText = cipher.encode(parseInt(offset.value), areaTexto.value.toUpperCase());
+    resultadoCifraEncode.innerText = cipher.encode(parseInt(offset.value), areaTexto.value);
 }
 
 function descodificarClick() {
-    resultadoCifraEncode.innerText = cipher.decode(parseInt(offset.value), areaTexto.value.toUpperCase());
+    resultadoCifraEncode.innerText = cipher.decode(parseInt(offset.value), areaTexto.value);
 }
 
 botaoCodificar.addEventListener("click", codificarClick);
